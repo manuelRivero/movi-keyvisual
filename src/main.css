@@ -9,12 +9,18 @@
 .payment{
   min-height: 900px;
 }
+.howItWorks{
+  min-height: 550px;
+}
 @media screen and ( max-width: 1024px) {
   .hero{
     min-height: none;
   }
   .payment{
-    min-height: 900px;
+    min-height: none;
+  }
+  .howItWorks{
+    min-height: none;
   }
 }
 /* Inter */

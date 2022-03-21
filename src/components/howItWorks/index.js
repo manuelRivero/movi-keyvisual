@@ -4,7 +4,7 @@ import step1 from "./../../assets/images/howItWorks/step-1.png";
 
 export default function HowItsWorks() {
   return (
-    <div className="container bg-green p-6 pb-section font-inter">
+    <div className="container bg-green p-6 pb-section font-inter howItWorks">
       <div className="max-w-md">
         <h1 className="text-black text-48 leading-none font-bold">
           ¿Cómo funciona?

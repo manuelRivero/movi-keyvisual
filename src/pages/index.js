@@ -1,4 +1,5 @@
 import * as React from "react";
+import AboutSubscription from "../components/aboutSubscription";
 import Features from "../components/features";
 import Hero from "../components/hero";
 import HowItsWorks from "../components/howItWorks";
@@ -14,6 +15,7 @@ const IndexPage = () => {
         <PaymentInfo />
         <Features />
         <HowItsWorks />
+        <AboutSubscription />
       </main>
     </Layout>
   );
