@@ -3,7 +3,20 @@
 @tailwind utilities;
 
 /* heading */
-
+.hero{
+  min-height: 900px;
+}
+.payment{
+  min-height: 900px;
+}
+@media screen and ( max-width: 1024px) {
+  .hero{
+    min-height: none;
+  }
+  .payment{
+    min-height: 900px;
+  }
+}
 /* Inter */
 @font-face {
     font-family: "Inter";

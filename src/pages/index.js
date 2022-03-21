@@ -1,11 +1,20 @@
 import * as React from "react";
+import Features from "../components/features";
+import Hero from "../components/hero";
+import HowItsWorks from "../components/howItWorks";
 import Layout from "../components/layout";
+import PaymentInfo from "../components/paymentInfo";
 
 // markup
 const IndexPage = () => {
   return (
     <Layout>
-      <main className="container p-1 font-inter"></main>
+      <main className="">
+        <Hero/>
+        <PaymentInfo />
+        <Features />
+        <HowItsWorks />
+      </main>
     </Layout>
   );
 };
