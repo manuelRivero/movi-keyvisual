@@ -6,7 +6,7 @@ export default function Header() {
       <div className="logo">
         <img src={logo} alt="Logo" />
       </div>
-      <nav >
+      <nav className="hidden md:block">
         <ul className="flex font-inter">
           <li>
             <a className="text-white py-2 px-4 block cursor-pointer hover:text-green">Acerca de</a>

@@ -45,6 +45,11 @@ export default function AboutSubscription() {
           </p>
         </div>
       </div>
+      <div>
+        <a className="py-2 px-4 block w-max mt-6 mx-auto bg-green text-black rounded-xl cursor-pointer">
+          Adquiere tu auto ya!
+        </a>
+      </div>
     </div>
   );
 }

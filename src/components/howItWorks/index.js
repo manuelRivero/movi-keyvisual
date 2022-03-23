@@ -6,9 +6,9 @@ import step3 from "./../../assets/images/howItWorks/step-3.png";
 
 export default function HowItsWorks() {
   return (
-    <div className="container bg-green p-6 pb-section font-inter howItWorks">
+    <div className="container bg-green p-6 pb-section font-inter howItWorks mt-section">
       <div className="max-w-md">
-        <h1 className="text-black text-48 leading-none font-bold">
+        <h1 className="text-black lg:text-48 text-30 leading-none font-bold">
           ¿Cómo funciona?
         </h1>
         <p className="text-gray mt-2">
@@ -26,7 +26,7 @@ export default function HowItsWorks() {
             <p className="text-gray-light text-bold text-64">1</p>
             <img
               src={step1}
-              className=" w-2/4 absolute transform -translate-x-1/2"
+              className=" w-1/3 lg:w-2/4 absolute transform -translate-x-1/2"
               alt="paso 1"
             />
           </div>

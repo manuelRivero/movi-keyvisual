@@ -8,11 +8,11 @@ import icon6 from "./../../assets/images/features/icon-6.svg";
 
 export default function Features() {
   return (
-    <div className="container grid grid-cols-2 gap-6 font-inter">
-      <div className="transform translate-y-section">
-        <div className="mb-section">
+    <div className="container grid grid-cols-1 lg:grid-cols-2 gap-6 font-inter">
+      <div className="transform lg:translate-y-section">
+        <div className="mb-6 lg:mb-section">
           <img src={icon1} alt="feature" />
-          <h2 className="text-black text-48 font-bold">Seguro</h2>
+          <h2 className="text-black lg:text-48 text-30 font-bold">Seguro</h2>
           <p className="text-gray">
             Todos nuestros autos incluyen seguro de cobertura amplia durante
             todo el plazo de tu suscripción para que siempre estés tranquilo.
@@ -21,9 +21,9 @@ export default function Features() {
             Conoce más
           </a>
         </div>
-        <div className="mb-section">
+        <div className="mb-6 lg:mb-section">
           <img src={icon2} alt="feature" />
-          <h2 className="text-black text-48 font-bold">GPS</h2>
+          <h2 className="text-black lg:text-48 text-30 font-bold">GPS</h2>
           <p className="text-gray">
             Todos nuestros vehículos cuentan con GPS para que puedas tener la
             ubicación en tiempo real, así como definir geocercas para limitar
@@ -33,9 +33,9 @@ export default function Features() {
             Conoce más
           </a>
         </div>
-        <div className="mb-section">
+        <div className="mb-6 lg:mb-section">
           <img src={icon3} alt="feature" />
-          <h2 className="text-black text-48 font-bold">
+          <h2 className="text-black lg:text-48 text-30 font-bold">
             Asistencia télefonica
           </h2>
           <p className="text-gray">
@@ -49,9 +49,9 @@ export default function Features() {
         </div>
       </div>
       <div className="">
-        <div className="mb-section">
+        <div className="mb-6 lg:mb-section">
           <img src={icon4} alt="feature" />
-          <h2 className="text-black text-black text-48 font-bold">
+          <h2 className="text-black text-black lg:text-48 text-30 font-bold">
             Entrega a domicilio
           </h2>
           <p className="text-gray">
@@ -63,9 +63,9 @@ export default function Features() {
             Conoce más
           </a>
         </div>
-        <div className="mb-section">
+        <div className="mb-6 lg:mb-section">
           <img src={icon5} alt="feature" />
-          <h2 className="text-black text-black text-48 font-bold">
+          <h2 className="text-black text-black lg:text-48 text-30 font-bold">
             Placas y tenencia{" "}
           </h2>
           <p className="text-gray">
@@ -77,9 +77,9 @@ export default function Features() {
             Conoce más
           </a>
         </div>
-        <div className="mb-section">
+        <div className="mb-6 lg:mb-section">
           <img src={icon6} alt="feature" />
-          <h2 className="text-black text-black text-48 font-bold">Mantenimientos</h2>
+          <h2 className="text-black text-black lg:text-48 text-30 font-bold">Mantenimientos</h2>
           <p className="text-gray">
             Nuestra suscripción incluye todos los gastos por mantenimiento
             preventivos durante el plazo de tu suscripción, simplemente tienes
