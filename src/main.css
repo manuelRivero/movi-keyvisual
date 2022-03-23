@@ -12,6 +12,10 @@
 .howItWorks{
   min-height: 550px;
 }
+
+.social-row {
+  max-width: 150px;
+}
 @media screen and ( max-width: 1024px) {
   .hero{
     min-height: none;
