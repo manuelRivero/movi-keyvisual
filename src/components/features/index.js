@@ -37,6 +37,7 @@ export default function Features() {
   return (
     <div
       ref={ref}
+      id="features"
       className="container grid grid-cols-1 lg:grid-cols-2 gap-6 font-inter"
     >
       <div className="transform lg:translate-y-section">

@@ -50,7 +50,8 @@ module.exports = {
       black: '#0E1D49',
       gray: "#696871",
       "gray-light": "#C4C4C4",
-      "blue-dark": "#0E1D49"
+      "blue-dark": "#0E1D49",
+      "black-shadow": "rgba(0,0,0, .3)"
     },
   },
   plugins: [],

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import AboutSubscription from "../components/aboutSubscription";
 import Faq from "../components/faq";
 import Features from "../components/features";
@@ -11,6 +12,10 @@ import PaymentInfo from "../components/paymentInfo";
 const IndexPage = () => {
   return (
     <Layout>
+      <Helmet>
+      <title>Movi</title>
+        <meta name="description" content="Aplicación para movi" />
+      </Helmet>
       <main className="">
         <Hero/>
         <PaymentInfo />

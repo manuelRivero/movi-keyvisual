@@ -3,7 +3,7 @@ import FaqAccordion from './faqAccordion'
 
 export default function Faq() {
   return (
-    <div className='container font-inter mt-6'>
+    <div className='container font-inter mt-6' id="faq">
       <h2 className='text-24 mb-4'>
       Preguntas frecuentes
       </h2>

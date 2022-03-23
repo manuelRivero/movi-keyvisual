@@ -69,7 +69,7 @@ export default function HowItsWorks() {
   }, [inView]);
 
   return (
-    <div className="relative">
+    <div className="relative" id="how-it-works">
       <motion.div
         ref={ref}
         animate={controls}

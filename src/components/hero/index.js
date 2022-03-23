@@ -30,7 +30,7 @@ export default function Hero() {
   }, [inView]);
 
   return (
-    <div className="hero container-fluid bg-hero-pattern w-full  bg-center bg-cover font-inter p-section px-0 relative">
+    <div id="hero" className="hero container-fluid bg-hero-pattern w-full  bg-center bg-cover font-inter p-section px-0 relative">
       <div className=" container w-full grid grid-cols-1 md:grid-cols-2 h-full items-center">
         <motion.div ref={ref} animate={controls} className="max-w-md">
           <motion.h1 animate={controls}  className="text-white lg:text-48 text-30 leading-none font-bold">
