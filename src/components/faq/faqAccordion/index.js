@@ -6,7 +6,7 @@ export default function FaqAccordion({ title, text }) {
   return (
     <div className="bg-gray-light p-2 rounded-md mb-2 flex items-center justify-between">
       <div>{title}</div>
-      <div>
+      <div className="flex-shrink-0">
         <img src={plusIcon} />{" "}
       </div>
     </div>

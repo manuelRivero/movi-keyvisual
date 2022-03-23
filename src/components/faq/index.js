@@ -3,7 +3,10 @@ import FaqAccordion from './faqAccordion'
 
 export default function Faq() {
   return (
-    <div className='container font-inter mt-6'>Faq
+    <div className='container font-inter mt-6'>
+      <h2 className='text-24 mb-4'>
+      Preguntas frecuentes
+      </h2>
     <div>
         <FaqAccordion title={"¿Cuál es el periodo de suscripción?"} />
         <FaqAccordion title={"¿Que incluye la suscripción mensual?"} />

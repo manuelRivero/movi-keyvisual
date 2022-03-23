@@ -1,4 +1,6 @@
-import React from "react";
+import { useAnimation, motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import icon1 from "./../../assets/images/features/icon-1.svg";
 import icon2 from "./../../assets/images/features/icon-2.svg";
 import icon3 from "./../../assets/images/features/icon-3.svg";
@@ -7,10 +9,38 @@ import icon5 from "./../../assets/images/features/icon-5.svg";
 import icon6 from "./../../assets/images/features/icon-6.svg";
 
 export default function Features() {
+  const { ref, inView } = useInView();
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        x: "0%",
+        transition: {
+          duration: 2,
+          type: "spring",
+          when: "beforeChildren",
+          staggerChildren: 1,
+        },
+      });
+    } else {
+      controls.start({
+        opacity: 0,
+        x: "-100%",
+
+        transition: { duration: 1, type: "spring" },
+      });
+    }
+  }, [inView]);
+
   return (
-    <div className="container grid grid-cols-1 lg:grid-cols-2 gap-6 font-inter">
+    <div
+      ref={ref}
+      className="container grid grid-cols-1 lg:grid-cols-2 gap-6 font-inter"
+    >
       <div className="transform lg:translate-y-section">
-        <div className="mb-6 lg:mb-section">
+        <motion.div animate={controls} className="mb-6 lg:mb-section">
           <img src={icon1} alt="feature" />
           <h2 className="text-black lg:text-48 text-30 font-bold">Seguro</h2>
           <p className="text-gray">
@@ -20,8 +50,8 @@ export default function Features() {
           <a className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
-        </div>
-        <div className="mb-6 lg:mb-section">
+        </motion.div>
+        <motion.div animate={controls} className="mb-6 lg:mb-section">
           <img src={icon2} alt="feature" />
           <h2 className="text-black lg:text-48 text-30 font-bold">GPS</h2>
           <p className="text-gray">
@@ -32,8 +62,8 @@ export default function Features() {
           <a className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
-        </div>
-        <div className="mb-6 lg:mb-section">
+        </motion.div>
+        <motion.div animate={controls} className="mb-6 lg:mb-section">
           <img src={icon3} alt="feature" />
           <h2 className="text-black lg:text-48 text-30 font-bold">
             Asistencia télefonica
@@ -46,10 +76,10 @@ export default function Features() {
           <a className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
-        </div>
+        </motion.div>
       </div>
       <div className="">
-        <div className="mb-6 lg:mb-section">
+        <motion.div animate={controls} className="mb-6 lg:mb-section">
           <img src={icon4} alt="feature" />
           <h2 className="text-black text-black lg:text-48 text-30 font-bold">
             Entrega a domicilio
@@ -62,8 +92,8 @@ export default function Features() {
           <a className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
-        </div>
-        <div className="mb-6 lg:mb-section">
+        </motion.div>
+        <motion.div animate={controls} className="mb-6 lg:mb-section">
           <img src={icon5} alt="feature" />
           <h2 className="text-black text-black lg:text-48 text-30 font-bold">
             Placas y tenencia{" "}
@@ -76,10 +106,12 @@ export default function Features() {
           <a className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
-        </div>
-        <div className="mb-6 lg:mb-section">
+        </motion.div>
+        <motion.div animate={controls} className="mb-6 lg:mb-section">
           <img src={icon6} alt="feature" />
-          <h2 className="text-black text-black lg:text-48 text-30 font-bold">Mantenimientos</h2>
+          <h2 className="text-black text-black lg:text-48 text-30 font-bold">
+            Mantenimientos
+          </h2>
           <p className="text-gray">
             Nuestra suscripción incluye todos los gastos por mantenimiento
             preventivos durante el plazo de tu suscripción, simplemente tienes
@@ -88,7 +120,7 @@ export default function Features() {
           <a className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
