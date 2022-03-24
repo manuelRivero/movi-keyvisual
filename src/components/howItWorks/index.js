@@ -124,8 +124,8 @@ export default function HowItsWorks() {
               </p>
               <ul className="list-disc text-12">
                 <li className="text-gray">Validación de identidad</li>
-                <li className="text-gray">Validación de identidad</li>
-                <li className="text-gray">Validación de identidad</li>
+                <li className="text-gray">Consulta de buró de crédito</li>
+                <li className="text-gray">Comprobación de ingresos</li>
               </ul>
             </div>
           </div>

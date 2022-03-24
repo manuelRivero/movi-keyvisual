@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./../../assets/images/layout/main-logo.svg";
 import social1 from "./../../assets/images/layout/social-1.png";
 import social2 from "./../../assets/images/layout/social-2.png";
@@ -6,8 +6,40 @@ import social3 from "./../../assets/images/layout/social-3.png";
 import social4 from "./../../assets/images/layout/social-4.png";
 import cirlces from "./../../assets/images/layout/gray-circles.png";
 import image from "./../../assets/images/layout/footer-image.png";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Footer() {
+  const { ref, inView } = useInView();
+  const controls = useAnimation();
+
+  const goToElement = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ block: "start", behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    if (inView) {
+      console.log("in view");
+      controls.start({
+        x: "0%",
+        opacity: 1,
+        transition: {
+          duration: 1,
+          type: "spring",
+          when: "beforeChildren",
+          staggerChildren: 1,
+        },
+      });
+    } else {
+      controls.start({
+        x: "-100%",
+        opacity: 0,
+        transition: { duration: 1, type: "spring" },
+      });
+    }
+  }, [inView]);
+
   return (
     <div className="relative">
       <img
@@ -24,7 +56,7 @@ export default function Footer() {
       >
         <div className="container grid grid-cols-1 lg:grid-cols-2 items-center">
           <div>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" onClick={()=>goToElement("hero")} />
             <div className="mt-6 flex justify-between social-row">
               <img src={social1} alt="redes sociales" />
               <img src={social2} alt="redes sociales" />
@@ -33,24 +65,45 @@ export default function Footer() {
             </div>
             <ul className="text-white mt-6">
               <li className="hover:text-green mt-4 cursor-pointer">
-                <a>Catálogo</a>
+                <a role="button"  onClick={()=>goToElement("features")}>Beneficios</a>
               </li>
               <li className="hover:text-green mt-4 cursor-pointer">
-                <a>¿Cómo funciona?</a>
+                <a role="button"  onClick={()=>goToElement("how-it-works")}>¿Cómo funciona?</a>
               </li>
               <li className="hover:text-green mt-4 cursor-pointer">
-                <a>Acerca de</a>
+                <a role="button"  onClick={()=>goToElement("about")}>Suscripción</a>
               </li>
-              <li className="hover:text-green mt-4 cursor-pointer">
-                <a>Beneficios</a>
-              </li>
-              <li className="hover:text-green mt-4 cursor-pointer">
+              <li role="button"  onClick={()=>goToElement("faq")} className="hover:text-green mt-4 cursor-pointer">
                 <a>FAQ</a>
               </li>
             </ul>
           </div>
-          <div>
-              <img src={image} alt="footer image" />
+          <div id="footer">
+            <motion.div ref={ref} animate={controls} className="max-w-md">
+              <motion.h1
+                animate={controls}
+                className="text-white lg:text-48 text-30 leading-none font-bold"
+              >
+                La manera más fácil de estrenar auto
+              </motion.h1>
+              <motion.p animate={controls} className="text-white mt-2 ">
+                La suscripción automotriz más accesible y flexible del mercado,
+                sin pago inicial y con opcíon a compra. Obten tu auto en 5
+                minutos y totalmente en línea.
+              </motion.p>
+              <motion.a
+                animate={controls}
+                className="block mt-2 py-2 px-4 cursor-pointer bg-green w-max rounded-lg text-black"
+              >
+                <a
+                  target={"_blank"}
+                  href="https://rkeuh727s75.typeform.com/to/t5bRgwDK"
+                >
+                  Pide tu auto{" "}
+                </a>
+              </motion.a>
+            </motion.div>
+            <img src={image} alt="footer image" />
           </div>
         </div>
       </div>

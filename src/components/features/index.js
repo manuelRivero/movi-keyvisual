@@ -34,6 +34,11 @@ export default function Features() {
     }
   }, [inView]);
 
+  const goToElement = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ block: "start", behavior: "smooth" });
+  };
+
   return (
     <div
       ref={ref}
@@ -48,7 +53,7 @@ export default function Features() {
             Todos nuestros autos incluyen seguro de cobertura amplia durante
             todo el plazo de tu suscripción para que siempre estés tranquilo.
           </p>
-          <a className="text-green cursor-pointer mt-2 block font-bold">
+          <a onClick={()=>goToElement("footer")}className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
         </motion.div>
@@ -60,7 +65,7 @@ export default function Features() {
             ubicación en tiempo real, así como definir geocercas para limitar
             las zonas donde puede circular tu auto.
           </p>
-          <a className="text-green cursor-pointer mt-2 block font-bold">
+          <a onClick={()=>goToElement("footer")}className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
         </motion.div>
@@ -74,7 +79,7 @@ export default function Features() {
             días del año donde puedes: agengar citas de servicio, dar
             seguimiento a siniestros, entro muchas otras solicitudes.
           </p>
-          <a className="text-green cursor-pointer mt-2 block font-bold">
+          <a onClick={()=>goToElement("footer")}className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
         </motion.div>
@@ -90,7 +95,7 @@ export default function Features() {
             tiempo récord. Si prefieres también puedes recogerlo en la agencia
             automotriz.
           </p>
-          <a className="text-green cursor-pointer mt-2 block font-bold">
+          <a onClick={()=>goToElement("footer")}className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
         </motion.div>
@@ -104,7 +109,7 @@ export default function Features() {
             así como hacer los pagos de tenencias y verificación durante todo el
             plazo de tu suscripción.
           </p>
-          <a className="text-green cursor-pointer mt-2 block font-bold">
+          <a onClick={()=>goToElement("footer")}className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
         </motion.div>
@@ -118,7 +123,7 @@ export default function Features() {
             preventivos durante el plazo de tu suscripción, simplemente tienes
             que llevar tu auto al taller sin pagar absolutamente nada.
           </p>
-          <a className="text-green cursor-pointer mt-2 block font-bold">
+          <a onClick={()=>goToElement("footer")}className="text-green cursor-pointer mt-2 block font-bold">
             Conoce más
           </a>
         </motion.div>

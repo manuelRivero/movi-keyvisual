@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `src/assets/images/layout/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/layout/movi-icon.png`, // This path is relative to the root of the site.
         name: `Movi`,
         short_name: `Movi`,
         start_url: `/`,
