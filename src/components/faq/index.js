@@ -3,7 +3,7 @@ import FaqAccordion from "./faqAccordion";
 
 const faqList = [
   {
-    title: "¿cual es el periodo de suscripción?",
+    title: "¿Cuál es el periodo de suscripción?",
     html: `<p>En Movi ofrecemos los siguientes plazos de suscripción:</p>
     <ul class="list-disc pl-3">
     <li>

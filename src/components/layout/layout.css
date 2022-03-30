@@ -1,0 +1,29 @@
+:root {
+  --text-black: #0e1d49;
+}
+
+.header {
+  transition: all 0.3s ease-in-out;
+}
+
+.header .logo > img,
+.header a {
+  transition: all 0.3s ease-in-out;
+}
+.header--active {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header--inactive .header-submit:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  color: var(--text-black);
+}
+
+.header--active .logo > img {
+  transform: scale(0.8);
+}
+
+.header--active a {
+  color: var(--text-black);
+}

@@ -56,24 +56,42 @@ export default function Footer() {
       >
         <div className="container grid grid-cols-1 lg:grid-cols-2 items-center">
           <div>
-            <img src={logo} alt="logo" onClick={()=>goToElement("hero")} />
-            <div className="mt-6 flex justify-between social-row">
-              <img src={social1} alt="redes sociales" />
-              <img src={social2} alt="redes sociales" />
-              <img src={social3} alt="redes sociales" />
-              <img src={social4} alt="redes sociales" />
+            <img src={logo} alt="logo" onClick={() => goToElement("hero")} />
+            <div className="mt-6 flex gap-2 social-row">
+              <a
+                href="https://www.linkedin.com/company/movisubscription"
+                target={"_blank"}
+              >
+                <img src={social1} alt="redes sociales" />
+              </a>
+              <a
+                href="https://instagram.com/movisubscription?utm_medium=copy_link"
+                target={"_blank"}
+              >
+                <img src={social4} alt="redes sociales" />
+              </a>
             </div>
             <ul className="text-white mt-6">
               <li className="hover:text-green mt-4 cursor-pointer">
-                <a role="button"  onClick={()=>goToElement("features")}>Beneficios</a>
+                <a role="button" onClick={() => goToElement("features")}>
+                  Beneficios
+                </a>
               </li>
               <li className="hover:text-green mt-4 cursor-pointer">
-                <a role="button"  onClick={()=>goToElement("how-it-works")}>¿Cómo funciona?</a>
+                <a role="button" onClick={() => goToElement("how-it-works")}>
+                  ¿Cómo funciona?
+                </a>
               </li>
               <li className="hover:text-green mt-4 cursor-pointer">
-                <a role="button"  onClick={()=>goToElement("about")}>Suscripción</a>
+                <a role="button" onClick={() => goToElement("about")}>
+                  Suscripción
+                </a>
               </li>
-              <li role="button"  onClick={()=>goToElement("faq")} className="hover:text-green mt-4 cursor-pointer">
+              <li
+                role="button"
+                onClick={() => goToElement("faq")}
+                className="hover:text-green mt-4 cursor-pointer"
+              >
                 <a>FAQ</a>
               </li>
             </ul>
@@ -93,11 +111,11 @@ export default function Footer() {
               </motion.p>
               <motion.a
                 animate={controls}
-                className="block mt-2 py-2 px-4 cursor-pointer bg-green w-max rounded-lg text-black"
+                className="hover:bg-white hover:text-green transition-all duration-300 block mt-2 py-2 px-4 cursor-pointer bg-green w-max rounded-lg text-black"
               >
                 <a
                   target={"_blank"}
-                  href="https://rkeuh727s75.typeform.com/to/t5bRgwDK"
+                  href="https://h8g8g8sv4pj.typeform.com/movi-app"
                 >
                   Pide tu auto{" "}
                 </a>

@@ -90,8 +90,8 @@ export default function AboutSubscription() {
         </div>
       </motion.div>
       <div>
-        <a href="https://rkeuh727s75.typeform.com/to/t5bRgwDK" target={"_blank"} className="py-2 px-4 block w-max mt-6 mx-auto bg-green text-black rounded-xl cursor-pointer">
-          Adquiere tu auto ya!
+        <a href="https://h8g8g8sv4pj.typeform.com/movi-app" target={"_blank"} className="hover:shadow-lg transition-all duration-300 py-2 px-4 block w-max mt-6 mx-auto bg-green text-black rounded-xl cursor-pointer">
+          ¡Adquiere tu auto ya!
         </a>
       </div>
     </div>

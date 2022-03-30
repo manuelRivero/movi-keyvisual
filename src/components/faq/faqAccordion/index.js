@@ -47,7 +47,7 @@ export default function FaqAccordion({ title, html }) {
             exit={{ opacity: 0 }}>
               <div
              
-                className="p-4"
+                className="p-4 mb-2 shadow-lg rounded-b-2xl"
                 dangerouslySetInnerHTML={{ __html: html }}
               ></div>
 

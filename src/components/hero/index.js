@@ -30,10 +30,16 @@ export default function Hero() {
   }, [inView]);
 
   return (
-    <div id="hero" className="hero container-fluid bg-hero-pattern w-full  bg-center bg-cover font-inter p-section px-0 relative">
+    <div
+      id="hero"
+      className="hero container-fluid bg-hero-pattern w-full  bg-center bg-cover font-inter p-section px-0 relative"
+    >
       <div className=" container w-full grid grid-cols-1 md:grid-cols-2 h-full items-center">
         <motion.div ref={ref} animate={controls} className="max-w-md">
-          <motion.h1 animate={controls}  className="text-white lg:text-48 text-30 leading-none font-bold">
+          <motion.h1
+            animate={controls}
+            className="text-white lg:text-48 text-30 leading-none font-bold"
+          >
             La manera más fácil de estrenar auto
           </motion.h1>
           <motion.p animate={controls} className="text-white mt-2 ">
@@ -41,7 +47,12 @@ export default function Hero() {
             pago inicial y con opcíon a compra. Obten tu auto en 5 minutos y
             totalmente en línea.
           </motion.p>
-          <motion.a animate={controls} className="block mt-2 py-2 px-4 cursor-pointer bg-green w-max rounded-lg text-black">
+          <motion.a
+            href="https://h8g8g8sv4pj.typeform.com/movi-app"
+            target="_blank"
+            animate={controls}
+            className="hover:bg-white transition-all duration-300 block mt-2 py-2 px-4 cursor-pointer bg-green w-max rounded-lg text-black"
+          >
             Pide tu auto
           </motion.a>
         </motion.div>

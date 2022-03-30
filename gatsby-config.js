@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Movi",
+    siteUrl:"http://project-landing.s3-website-us-east-1.amazonaws.com/",
     description:
       "Aplicación para movi",
     image: "src/images/layout/logo-black.png", // Path to the image placed in the 'static' folder, in the project's root directory.
