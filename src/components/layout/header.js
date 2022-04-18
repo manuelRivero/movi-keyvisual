@@ -5,9 +5,7 @@ import "./layout.css";
 const defaultHeader =
   "header w-full fixed top-0 left-0 z-10 left-1/2 transform -translate-x-1/2";
 export default function Header() {
-  const [headerActive, setHeaderActive] = useState(
-    Boolean(window.pageYOffset > 80)
-  );
+  const [headerActive, setHeaderActive] = useState(false);
   const goToElement = (id) => {
     const element = document.getElementById(id);
     element.scrollIntoView({ block: "start", behavior: "smooth" });
