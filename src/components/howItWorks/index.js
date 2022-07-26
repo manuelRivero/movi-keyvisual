@@ -58,7 +58,7 @@ export default function HowItsWorks() {
       });
       controlsimages.start({
         opacity: 0,
-        scale:.5,
+        scale: 0.5,
         y: "-100%",
         transition: {
           duration: 2,
@@ -139,7 +139,7 @@ export default function HowItsWorks() {
               />
             </div>
             <div>
-              <p className="font-bold text-black text-14">Selecciona tu auto</p>
+              <p className="font-bold text-black text-14">Recibe tu auto</p>
               <p className="text-gray mt-2">
                 Acepta la oferta, firma el contrato y estrena el auto de tus
                 sueños desde la puerta de tu hogar.
